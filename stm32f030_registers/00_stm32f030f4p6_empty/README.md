@@ -1,7 +1,7 @@
 # 00_stm32f030f4p6_empty
 # sat 02 mar 2024
 
-At first, I created a simple Main. The file in the main function of which is nothing. I added two files that will help to correctly compile a executable file, see https://kleinmbeded.com/stm32-without-cubeide-part-the-the-necessites/
+At first, I created a simple Main. The file in the main function of which is nothing. I added two files that will help to correctly compile a executable file, see https://kleinembedded.com/stm32-without-cubeide-part-1-the-bare-necessities/
 
 Сначало я создал простой main.с файл в в основной функции которой ничего нет. Я добавил два файла которые помогут правильно скомпиллировать исполняемый файл, см. https://kleinembedded.com/stm32-without-cubeide-part-1-the-bare-necessities/
 
