@@ -2,13 +2,13 @@
 # sat 02 mar 2024
 
 # pinout STM32F030F4P6
-pin 15 - GND
-pin 16 - 3V3
-pin 19 - SWDIO
-pin 20 - SWCLK
+pin 15 - GND 
+pin 16 - 3V3 
+pin 19 - SWDIO 
+pin 20 - SWCLK 
 
-pin 2  - PF0 as out
-pin 6  - PA0 as out
+pin 2  - PF0 as out 
+pin 6  - PA0 as out 
 pin 14 - PB1 as out
 
 #
