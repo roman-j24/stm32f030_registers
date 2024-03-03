@@ -35,12 +35,12 @@ int main(void)
 	*((volatile uint32_t *)(0x40021000 + 0x18)) |= (1 << 14); // RCC_APB2ENR
 
 	// Configure PA9, PA10 as alternate function mode
-	*((volatile uint32_t *)(0x48000000 + 0x00)) |= (2 << 18); // GPIOx_BSRR, 2 is 0b10
-	*((volatile uint32_t *)(0x48000000 + 0x00)) |= (2 << 20); // GPIOx_BSRR
+	*((volatile uint32_t *)(0x48000000 + 0x00)) |= (2 << 18); // GPIOx_MODER, 2 is 0b10
+	*((volatile uint32_t *)(0x48000000 + 0x00)) |= (2 << 20); // GPIOx_MODER
 
 	// no pull up/down PA9, PA10
-	*((volatile uint32_t *)(0x48000000 + 0x00)) |= (0 << 18); // GPIOx_MODER, 0 is 0b00
-	*((volatile uint32_t *)(0x48000000 + 0x00)) |= (0 << 20); // GPIOx_MODER
+	*((volatile uint32_t *)(0x48000000 + 0x0C)) |= (0 << 18); // GPIOx_PUPDR, 0 is 0b00
+	*((volatile uint32_t *)(0x48000000 + 0x0C)) |= (0 << 20); // GPIOx_PUPDR
 
 	// Configure PA9, PA10 as high-speed mode
 	*((volatile uint32_t *)(0x48000000 + 0x08)) |= (3 << 18); // GPIOx_OSPEEDR, 3 is 0b11
