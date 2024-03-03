@@ -1,12 +1,23 @@
-# stm32f030_registers
+# 00_stm32f030f4p6_empty
 # sat 02 mar 2024
 
-Hello! I decided to deal with the STM32F030 programming using registers to better understand what is happening inside the CPU processes and what data is sent where.
-One of the articles that explains this for the STM32F410 microcontroller "STM32 Without Cubeide (Part 1): The Bare Necessites".
-After reading this article and using Datashit on STM32F030 I got something ...
+At first, I created a simple Main. The file in the main function of which is nothing. I added two files that will help to correctly compile a executable file, see https://kleinembedded.com/stm32-without-cubeide-part-1-the-bare-necessities/
 
-Привет! Я решил разобраться с программированием STM32F030 с помощью регистров чтобы лучше понимать что происходит внутри процессов ЦПУ и какие данные куда отправляются.
-Одна из статей которая объясняет это для микроконтроллера STM32F410 "STM32 without CubeIDE (Part 1): The bare necessities".
-Прочитав эту статью и используя даташит на STM32F030 у меня получилось кое что...
+Сначало я создал простой main.с файл в в основной функции которой ничего нет. Я добавил два файла которые помогут правильно скомпиллировать исполняемый файл, см. https://kleinembedded.com/stm32-without-cubeide-part-1-the-bare-necessities/
 
-see datasheet rm0360-stm32f030x4x6x8xc-and-stm32f070x6xb-advanced-armbased-32bit-mcus-stmicroelectronics.pdf
+pin 15 - GND | pin 16 - 3V3 | pin 19 - SWDIO | pin 20 - SWCLK
+
+# Compile
+arm-none-eabi-as -o crt.o crt.s
+# Compile
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m0 -O0 -c -o main.o main.c
+# Linker
+arm-none-eabi-ld -T linker.ld -o main.elf crt.o main.o
+# Convert .elf file to .bin
+arm-none-eabi-objcopy -O binary main.elf main.bin
+# flash STM32F030F4P6
+st-flash write main.bin 0x8000000
+
+If the .bin file is compiled, then everything is OK and you can start working with registers directly.
+
+Если .bin файл скомпилирован, то всё ок и можно начинать работать с регистрами напрямую.
