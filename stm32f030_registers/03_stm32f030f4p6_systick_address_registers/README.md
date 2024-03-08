@@ -7,6 +7,5 @@ pin 16 - 3V3 |
 pin 19 - SWDIO |
 pin 20 - SWCLK
 
-pin 17  - PA9 usart tx |
-pin 18  - PA10 usart rx 
+PA7 - LED
 
