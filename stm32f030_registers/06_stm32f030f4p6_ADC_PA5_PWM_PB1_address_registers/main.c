@@ -34,25 +34,25 @@ int main(void)
 	// Configure PA5
 	GPIOB_MODER |=  (0b11 << 10);            // Set PA5 to analog mode
 	// Configure PB1
-	GPIOB_AFRL  &= ~(0xF << 4);		 // GPIOB_AFRL, Clear bits for PB1
-	GPIOB_AFRL  |=  (1 << 4);		 // GPIOB_AFRL, Set alternate function 1 for PB1 (TIM3_CH4)
-	GPIOB_MODER |=  (2 << 2);		 // GPIOB_MODER, Set PB1 as alternate function mode
+	GPIOB_AFRL  &= ~(0xF << 4);		 // Clear bits for PB1
+	GPIOB_AFRL  |=  (1 << 4);		 // Set alternate function 1 for PB1 (TIM3_CH4)
+	GPIOB_MODER |=  (2 << 2);		 // Set PB1 as alternate function mode
 
-	// Configure TIM3, enable clock
-	RCC_APB1ENR |=  (1 << 1);                // RCC_APB1ENR
+	// Configure TIM3
+	RCC_APB1ENR |=  (1 << 1);                // Enable clock
 	// Frequency, duty pulse
-	TIM3_ARR     =  1000 - 1;		 // TIM3_ARR, set auto-reload value
-	TIM3_PSC     =  80 - 1;			 // TIM3_PSC, set prescaler value
-	TIM3_CCR4    =  10;			 // TIM3_CCR4, duty
-	TIM3_CCMR2  |=  (0b110 << 12);           // TIM3_CCMR1, Set PWM mode 1 for channel 4
+	TIM3_ARR     =  1000 - 1;		 // Set auto-reload value
+	TIM3_PSC     =  80 - 1;			 // Set prescaler value
+	TIM3_CCR4    =  10;			 // Duty
+	TIM3_CCMR2  |=  (0b110 << 12);           // Set PWM mode 1 for channel 4
 	// Output and counter enable
-	TIM3_CCER   |=  (1 << 12);		 // TIM3_CCER, CC4E: Capture/Compare 4 output enable
-	TIM3_CR1    |=  (1 << 0);		 // TIM3_CR1, CEN: Counter enable
+	TIM3_CCER   |=  (1 << 12);		 // CC4E: Capture/Compare 4 output enable
+	TIM3_CR1    |=  (1 << 0);		 // CEN: Counter enable
 
 	// Configure ADC
 	RCC_APB2ENR |=  (1 << 9);                // ADCEN
 	ADC_CR      |=  (1 << 4) | (1 << 0);     // ADSTP: ADC stop conversion command; ADEN
-    	ADC_SMPR    &= ~(0b111 << 0);            // reset
+    	ADC_SMPR    &= ~(0b111 << 0);            // Reset
     	ADC_SMPR    |=  (0b111 << 0);            // SMP[2:0]: Sampling time selection
     	ADC_CHSELR  |=  (1 << 5);                // Select channel 5 for conversion
     	ADC_CR      |=  (1 << 31);               // Start calibration
