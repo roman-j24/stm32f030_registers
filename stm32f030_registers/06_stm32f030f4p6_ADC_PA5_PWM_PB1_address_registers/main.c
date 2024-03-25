@@ -5,20 +5,20 @@
 
 #define RCC_AHBENR  (*((volatile uint32_t *)0x40021014))
 #define RCC_APB2ENR (*((volatile uint32_t *)0x40021018))
-#define RCC_APB1ENR (*(volatile uint32_t *)(0x4002101C))
+#define RCC_APB1ENR (*((volatile uint32_t *)0x4002101C))
 
 #define GPIOA_MODER (*((volatile uint32_t *)0x48000000))
 #define GPIOA_AFRL  (*((volatile uint32_t *)0x48000020))
 #define GPIOB_MODER (*((volatile uint32_t *)0x48000400))
-#define GPIOB_AFRL  (*((volatile uint32_t *)0x48000420))
 #define GPIOB_ODR   (*((volatile uint32_t *)0x48000414))
+#define GPIOB_AFRL  (*((volatile uint32_t *)0x48000420))
 
-#define TIM3_CR1    (*(volatile uint32_t *)(0x40000400))
-#define TIM3_ARR    (*(volatile uint32_t *)(0x4000042C))
-#define TIM3_CCMR2  (*(volatile uint32_t *)(0x4000041C))
-#define TIM3_CCER   (*(volatile uint32_t *)(0x40000420))
-#define TIM3_PSC    (*(volatile uint32_t *)(0x40000428))
-#define TIM3_CCR4   (*(volatile uint32_t *)(0x40000440))
+#define TIM3_CR1    (*((volatile uint32_t *)0x40000400))
+#define TIM3_CCMR2  (*((volatile uint32_t *)0x4000041C))
+#define TIM3_ARR    (*((volatile uint32_t *)0x4000042C))
+#define TIM3_CCER   (*((volatile uint32_t *)0x40000420))
+#define TIM3_PSC    (*((volatile uint32_t *)0x40000428))
+#define TIM3_CCR4   (*((volatile uint32_t *)0x40000440))
 
 #define ADC_ISR     (*((volatile uint32_t *)0x40012400))
 #define ADC_CR      (*((volatile uint32_t *)0x40012408))
