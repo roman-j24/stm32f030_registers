@@ -15,3 +15,5 @@ pin 14 - PB1 as out
 The LED is connected through a resistor with a resistance of about 200 Ohms
 
 Светодиод подключён через резистор сопротивлением примерно 200 Ом
+
+https://www.youtube.com/watch?v=VBLx3aW2mDw
