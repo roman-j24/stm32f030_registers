@@ -10,3 +10,5 @@ pin 20 - SWCLK
 PA6 - encoder A | 
 PA7 - encoder B | 
 PB1 - LED, PWM
+
+https://www.youtube.com/watch?v=KdMAIkUq7VY
