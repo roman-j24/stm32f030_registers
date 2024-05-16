@@ -9,3 +9,4 @@ pin 20 - SWCLK
 
 PA7 - LED
 
+https://www.youtube.com/watch?v=ODQxU_iXJLs
