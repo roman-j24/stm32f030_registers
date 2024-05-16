@@ -10,3 +10,4 @@ pin 20 - SWCLK
 pin 17  - PA9 usart tx |
 pin 18  - PA10 usart rx 
 
+https://www.youtube.com/watch?v=H0pj8ZfBHow
