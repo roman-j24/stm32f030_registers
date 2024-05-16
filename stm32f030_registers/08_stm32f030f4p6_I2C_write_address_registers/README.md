@@ -23,3 +23,5 @@ P6 - D6 - 13 pin
 P7 - D7 - 14 pin 
 
 pin 6 - GND | pin 16 - +3.3V or V+5V
+
+https://www.youtube.com/watch?v=SbSfJB5Cx4c
