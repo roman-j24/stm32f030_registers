@@ -10,3 +10,5 @@ pin 20 - SWCLK
 
 PA5 - ADC
 PB1 - LED, PWM
+
+https://www.youtube.com/watch?v=siLCn7PTuqU
