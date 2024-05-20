@@ -29,3 +29,5 @@ The display is controlled by 8 wires. Three wires are responsible for the contro
 4 -bit mode is used, so 8 bit data are divided into two halves and sent in parts.
 
 On my version of the board there are no resistors pulling up to the plus for i2c, the poet I had to insert them on the layout.
+
+https://www.youtube.com/watch?v=njukunLdQ1Y
